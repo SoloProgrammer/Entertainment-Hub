@@ -1,0 +1,5 @@
+apikey(v3) = 7c180163704bb4de67462c4b92a14c4a
+
+v4 = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YzE4MDE2MzcwNGJiNGRlNjc0NjJjNGI5MmExNGM0YSIsInN1YiI6IjYzMDM3ZDg0YjM5ZTM1MDA3YTg1ZjUxZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YlNTyT8jCjSKL-N-tK8xj0qOxhJcmtNngPT8dsOsohY
+
+https://api.themoviedb.org/3/trending/all/day?api_key=7c180163704bb4de67462c4b92a14c4a

@@ -1,38 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #404b63;
   color: white;
+  padding-top: 130px;
+  padding-bottom: 1rem;
+} 
+.page_title{
+  font-size: 2.7vw;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-weight: 100;
+  text-transform: uppercase
 }
 
-.App-link {
-  color: #61dafb;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  min-height: 1000px;
+  background: #404b63;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+#Loading_txt{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 1em;
+
+}
+#Loading_txt img{
+  width: 85px;
+  width: 130px;
+}
+
+.not_found{
+  width: 100%;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.trending_image{
+  width: 35px;
+  border-radius: 50%;
+}
+
+@media (max-width:900px){
+  .App{
+    padding-top: 80px;
   }
-  to {
-    transform: rotate(360deg);
+  .page_title{
+    font-size: 3.6vw;
+  }
+}
+
+@media (max-width:700px){
+  .not_found{
+    font-size: 5.5vw;
+  }
+  .App{
+    padding-top: 80px;
+  }
+  .page_title{
+    font-size: 6vw;
+  }
+.trending_image{
+  width: 29px;
+}
+}
+@media (max-width:500px){
+  .App{
+    padding-top: 70px;
+  }
+  .page_title{
+    font-size: 6.5vw;
+  }
+  .MuiContainer-root {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }

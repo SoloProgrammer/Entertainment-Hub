@@ -1,0 +1,105 @@
+.ContentModal_div{
+    display: flex;
+    /* justify-content: space-between; */
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    overflow: auto;
+}
+.ContentModal_div::-webkit-scrollbar{
+    display: none;
+}
+
+.Content_portrait{
+    object-fit: contain;
+    border-radius: 10px;
+}
+.ContentModal_landscape{
+    display: none;
+    border-radius: 10px;
+    flex-direction: column;
+    object-fit: contain;
+}
+.cast_{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+    padding: .4rem .7rem;
+    background: rgb(0, 162, 255);
+    width: 50%;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    margin-left: .5rem;
+}
+.ContentModal_about{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: space-around;
+    width: 68%;
+}
+.ContentModal_title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+.tagline{
+    font-weight: 200;
+    color: #fff;
+    text-align: center;
+}
+
+.ContentModal_description{
+    /* width: 90%; */
+    box-shadow: inset 1px 1px 4px rgb(27, 36, 45) , inset -1px -1px 4px rgb(27, 36, 45);
+    margin-inline: auto;
+    height: 200px;
+    padding: .5rem;
+    border-radius: 7px;
+    overflow: auto;
+    border: 1px solid rgba(255,255,255,.5);
+
+}
+.ContentModal_description::-webkit-scrollbar{
+    display: none;
+}
+
+.ContentModal_about .video_btn{
+    background-color: rgb(255, 15, 15);
+}
+.ContentModal_about .video_btn:hover{
+    color: white;
+    background-color: rgb(254, 44, 44);
+}
+
+@media (max-width:900px){
+    
+    .ContentModal_div{
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 90%;
+    }
+    .Content_portrait{
+        display: none;
+    }
+    .ContentModal_about{
+        gap: 1rem;
+        width: 100%;
+    }
+    .ContentModal_landscape{
+        display: flex;
+    }
+    .ContentModal_title{
+        font-size: 1.55rem;
+    }
+    .ContentModal_description{
+        width: 95%;
+        height: 170px;
+    }
+}
+@media (max-width:700px){
+    .cast_{
+        width: fit-content;
+    }
+} 

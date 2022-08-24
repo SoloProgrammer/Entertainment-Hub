@@ -1,0 +1,20 @@
+.carousel_Item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    object-fit: contain;
+    
+}
+
+.carousel_Item img{
+    box-shadow: 3px 3px 3px rgb(0,0,0,.4);
+    border-radius: 10px;
+    margin-bottom: .3rem;
+    /* height: ; */
+}
+.carousel_Item b{
+    text-align: center;
+    font-size: .8rem;
+}
+
