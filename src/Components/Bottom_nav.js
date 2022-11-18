@@ -26,8 +26,6 @@ export default function SimpleBottomNavigation() {
 
   const location = useLocation()
   
-  console.log(location)
-  
   const classes = useStyles();
 
   const [navValue, setnavValue] = React.useState(0);

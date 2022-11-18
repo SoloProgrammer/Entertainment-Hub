@@ -42,7 +42,6 @@ function Movies() {
     }
 
   }
-  console.log(totalpages)
   useEffect(() => {
     fetchMovies()
     // eslint-disable-next-line
