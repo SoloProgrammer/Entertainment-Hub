@@ -8,7 +8,7 @@ import MovieIcon from '@material-ui/icons/Movie';
 import TvIcon from '@material-ui/icons/Tv';
 import SearchIcon from '@material-ui/icons/Search';
 
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,  useLocation} from 'react-router-dom'
 import { useEffect } from 'react';
 
 const useStyles = makeStyles({
@@ -23,24 +23,42 @@ const useStyles = makeStyles({
 });
 
 export default function SimpleBottomNavigation() {
+
+  const location = useLocation()
+  
+  console.log(location)
+  
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+
+  const [navValue, setnavValue] = React.useState(0);
+
+  const [value1, setValue1] = React.useState(0);
+
 
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(value === 0) navigate('/')
-    else if(value === 1) navigate('/movies')
-    else if(value === 2) navigate('/series')
-    else if(value === 3) navigate('/search')
+    if(navValue === 0) navigate('/')
+    else if(navValue === 1) navigate('/movies')
+    else if(navValue === 2) navigate('/series')
+    else if(navValue === 3) navigate('/search')
+    
     // eslint-disable-next-line
-  },[value])
+  },[value1])
+
+  useEffect(()=>{
+    if(location.pathname === "/") setnavValue(0)
+    else if(location.pathname === "/movies") setnavValue(1)
+    else if(location.pathname === "/series") setnavValue(2)
+    else if(location.pathname === "/search") setnavValue(3)
+  },[location.pathname])
 
   return (
     <BottomNavigation
-      value={value}
+      value={navValue}
       onChange={(event, newValue) => {
-        setValue(newValue);
+        setnavValue(newValue);
+        setValue1(newValue);
       }}
       // showLabels
       className={classes.root}

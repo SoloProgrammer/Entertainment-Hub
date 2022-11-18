@@ -3,7 +3,7 @@ import '../Header/Header.css'
 const Header = () => {
   return (
     <div>
-      <header className='header'>🎬 Entertainment Hub 🎥</header>
+     <header onClick={()=>{window.scroll(0,0)}} className='header'>🎬 Entertainment Hub 🎥</header>
     </div>
   )
 }

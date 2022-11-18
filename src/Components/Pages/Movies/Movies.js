@@ -1,3 +1,4 @@
+
 import axios from 'axios'
 import React, { useRef } from 'react'
 import { useState } from 'react'
@@ -41,6 +42,7 @@ function Movies() {
     }
 
   }
+  console.log(totalpages)
   useEffect(() => {
     fetchMovies()
     // eslint-disable-next-line
